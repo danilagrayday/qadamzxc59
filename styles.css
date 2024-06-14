@@ -1,47 +1,13 @@
-.progress_few {
-    position: relative;
-    height: 10px;
-    width: 90%; /* Увеличил ширину для мобильных устройств */
-    max-width: 100%; /* Убрал жесткое ограничение */
-    border-radius: 15px;
-}
-
-.progress_few .color {
-    position: absolute;
-    background-color: #fdfdfd;
-    width: 0;
-    height: 10px;
-    border-radius: 15px;
-    animation: progres 4s linear forwards;
-}
-
-@keyframes progres {
-    0% {
-        width: 1%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-.progress_few {
-    height: 100%;
-    background-color: #FFD700;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
 body, html {
     height: 100%;
     margin: 0;
     display: flex;
+    flex-direction: column; /* Changed to column for better mobile alignment */
     justify-content: center;
     align-items: center;
-
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Темный фон */
-    color: #f0f0f0; /* Светлый текст */
+    background-color: #1a1a1a;
+    color: #f0f0f0;
 }
 
 .container {
@@ -60,7 +26,7 @@ body, html {
 
 .main_menu {
     width: 90%;
-    max-width: 100%;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,35 +42,35 @@ body, html {
 
 .avatar {
     border-radius: 6px;
-    width: 100%; /* Увеличил ширину для мобильных устройств */
-    max-width: 100%; /* Убрал жесткое ограничение */
-    height: auto; /* Автоматическая высота */
+    width: 90%;
+    height: auto;
+    max-width: 350px;
     background-color: #000;
     margin-top: 1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .avatar span {
     flex: 1;
     display: flex;
     justify-content: flex-start;
-    margin-left: 20px;
-    font-size: 16px; /* Уменьшил размер шрифта */
+    margin-left: 10px;
+    font-size: 16px;
     color: #fff;
 }
 
 .avatar_pod {
     border-radius: 6px;
-    width: 100%; /* Увеличил ширину для мобильных устройств */
-    max-width: 100%; /* Убрал жесткое ограничение */
-    height: 25px;
+    width: 90%;
+    max-width: 350px;
+    height: auto;
     margin-top: 2%;
     display: flex;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
     text-align: center;
 }
@@ -112,52 +78,37 @@ body, html {
 .tap {
     border-radius: 6px;
     width: 20%;
-    height: 20px;
+    height: auto;
     background-color: #000;
     margin: 5px;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
-    font-size: 12px;
+    font-size: 10px;
     color: #fff;
     text-align: center;
-    box-sizing: border-box; /* Исправил ошибку в значении box-sizing */
+    box-sizing: border-box;
 }
 
-.next-lvl {
+.next-lvl, .lvl {
     border-radius: 6px;
     width: 25%;
-    height: 20px;
+    height: auto;
     background-color: #000;
     margin: 5px;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
-    font-size: 12px;
+    font-size: 10px;
     color: #fff;
-    box-sizing: border-box; /* Исправил ошибку в значении box-sizing */
-}
-
-.lvl {
-    border-radius: 6px;
-    width: 25%;
-    height: 20px;
-    background-color: #000;
-    margin: 5px;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    align-items: center;
-    font-size: 12px;
-    color: #fff;
-    box-sizing: border-box; /* Исправил ошибку в значении box-sizing */
+    box-sizing: border-box;
 }
 
 .tap img, .lvl img, .next-lvl img {
-    width: 20px; /* Уменьшил размеры изображений */
-    height: 20px; /* Уменьшил размеры изображений */
+    width: 20px;
+    height: 20px;
 }
 
 .progress_coin {
@@ -165,50 +116,46 @@ body, html {
 }
 
 .progress_coin span {
-    font-size: 16px; /* Исправил ошибку в свойстве text-size на font-size */
+    font-size: 12px;
 }
 
 .coins_progress {
     border-radius: 6px;
-    width: 100%;
-    height: auto; /* Автоматическая высота */
+    width: 90%;
+    height: auto;
     align-items: center;
     display: flex;
     justify-content: center;
-    font-size: 24px; /* Уменьшил размер шрифта */
+    font-size: 200%;
     color: #fff;
-    align-items: center;
 }
 
 .coins_progress img {
-    width: 12%;
-    height: 12%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    width: 10%;
+    height: 10%;
 }
 
 .progress {
     position: relative;
     height: 10px;
-    width: 90%; /* Увеличил ширину для мобильных устройств */
+    width: 90%;
     margin-top: 2%;
-    max-width: 100%; /* Убрал жесткое ограничение */
+    max-width: 450px;
     border-radius: 15px;
-    background-color: #ddd; /* Ensure the progress bar background is visible */
+    background-color: #ddd;
 }
 
 .progress .color {
     position: absolute;
-    background-color: #00ff00; /* Green color for progress */
+    background-color: #00ff00;
     width: 0;
     height: 10px;
     border-radius: 15px;
-    transition: width 0.5s ease; /* Smooth width transition */
+    transition: width 0.5s ease;
 }
 
 .progress-bar {
-    width: 90%; /* Увеличил ширину для мобильных устройств */
+    width: 90%;
     height: 20px;
     border-radius: 10px;
     align-items: center;
@@ -218,8 +165,8 @@ body, html {
 }
 
 .coin {
-    width: 150px; /* Уменьшил размеры для мобильных устройств */
-    height: 150px; /* Уменьшил размеры для мобильных устройств */
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,7 +180,7 @@ body, html {
     background-size: contain;
     border: none;
     cursor: pointer;
-    border-radius: 130px;
+    border-radius: 50%;
     transition: transform 0.1s ease-in-out;
 }
 
@@ -253,37 +200,27 @@ body, html {
     }
 }
 
-#image-button:active {
-    animation: pressAnimation 0.1s ease-in-out;
-}
-
 .energy-info {
     margin-top: 3%;
     border-radius: 6px;
     width: 90%;
-    height: auto; /* Автоматическая высота */
+    height: auto;
     align-items: center;
     display: flex;
     justify-content: space-between;
     color: #fff;
-    align-items: center;
 }
 
 .energy-info img {
-    width: 12%; /* Уменьшил размеры изображений */
-    height: 12%; /* Уменьшил размеры изображений */
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    width: 15%;
+    height: 15%;
 }
 
 .energy_tap {
     display: inline-block;
     margin-left: 2%;
     width: 30%;
-    border: none;
-    font-size: 18px; /* Уменьшил размер шрифта */
-    align-items: center;
+    font-size: 100%;
     display: flex;
     justify-content: center;
 }
@@ -292,35 +229,30 @@ body, html {
     margin: 5px;
     width: 20px;
     height: 20px;
-    border: none;
-    align-items: center;
 }
 
 .boost_button {
     width: 35%;
-    align-items: center;
     display: flex;
     justify-content: center;
-    margin-left: 35%;
-    font-size: 14px; /* Уменьшил размер шрифта */
+    margin-left: 30%;
+    font-size: 100%;
     border: none;
-    background-color: rgba(0, 0, 0, 0); /* This sets a transparent background */
+    background-color: rgba(0, 0, 0, 0);
     color: #fdfdfd;
     cursor: pointer;
 }
 
 .boost_button img {
-    margin: 15px;
-    width: 20%; /* Уменьшил размеры изображений */
-    height: 20%; /* Уменьшил размеры изображений */
-    align-items: center;
+    margin: 10px;
+    width: 20%;
+    height: 20%;
 }
 
 .navigation {
     padding: 2%;
-    width: 90%; /* Увеличил ширину для мобильных устройств */
-    height: auto; /* Автоматическая высота */
-    max-width: 100%; /* Убрал жесткое ограничение */
+    width: 90%;
+    height: auto;
     display: flex;
     justify-content: space-around;
     background-color: #000;
@@ -328,8 +260,8 @@ body, html {
 }
 
 .navigation-line {
-    width: 90%; /* Увеличил ширину для мобильных устройств */
-    height: auto; /* Автоматическая высота */
+    width: 90%;
+    height: auto;
     display: flex;
     justify-content: space-around;
     background-color: #000;
@@ -359,31 +291,27 @@ body, html {
 
 .coin {
     position: relative;
-    display: inline-block; /* Чтобы уведомление располагалось рядом с изображением */
+    display: inline-block;
 }
 
 .coin-notification {
     position: absolute;
-    top: 50%; /* Располагаем уведомление по вертикали в центре */
-    left: 50%; /* Располагаем уведомление по горизонтали в центре */
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     padding: 8px 12px;
     border-radius: 5px;
-    font-size: 12px; /* Уменьшил размер шрифта */
+    font-size: 12px;
     font-weight: bold;
-    z-index: 1; /* Выше остальных элементов */
-    opacity: 0; /* Изначально делаем уведомление невидимым */
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Плавная анимация появления */
-    pointer-events: none; /* Уведомление не будет перехватывать события мыши */
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    pointer-events: none;
 }
 
 .coin:hover .coin-notification {
-    opacity: 1; /* При наведении делаем уведомление видимым */
-    transform: translate(-50%, -60%); /* Немного поднимаем уведомление */
+    opacity: 1;
+    transform: translate(-50%, -60%);
 }
