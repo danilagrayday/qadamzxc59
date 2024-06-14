@@ -5,6 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 4000);
 });
 
+document.addEventListener('gesturestart', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }, { passive: false });
+document.addEventListener('gesturechange', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }, { passive: false });
+
+document.addEventListener('gestureend', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }, { passive: false });
+
 let energyTap = 100;
 let coinsProgress = 0;
 const maxCoins = 5000; // Количество монет для достижения уровня
