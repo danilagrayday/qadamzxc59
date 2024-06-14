@@ -1,8 +1,8 @@
 .progress_few {
     position: relative;
     height: 10px;
-    width: 80%;
-    max-width: 450px;
+    width: 90%; /* Увеличил ширину для мобильных устройств */
+    max-width: 100%; /* Убрал жесткое ограничение */
     border-radius: 15px;
 }
 
@@ -38,13 +38,11 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    touch-action: manipulation;
-    -ms-touch-action: manipulation;
+
     font-family: 'Arial', sans-serif;
     background-color: #1a1a1a; /* Темный фон */
     color: #f0f0f0; /* Светлый текст */
 }
-
 
 .container {
     width: 100%;
@@ -61,14 +59,14 @@ body, html {
 }
 
 .main_menu {
-    width: 100%;
-    max-width: 450px;
+    width: 90%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.profile-info{
+.profile-info {
     margin-top: 20px;
     width: 90%;
     display: flex;
@@ -76,11 +74,11 @@ body, html {
     align-items: center;
 }
 
-.avatar{
+.avatar {
     border-radius: 6px;
-    width: 90%;
-    height: 10%;
-    max-width: 350px;
+    width: 100%; /* Увеличил ширину для мобильных устройств */
+    max-width: 100%; /* Убрал жесткое ограничение */
+    height: auto; /* Автоматическая высота */
     background-color: #000;
     margin-top: 1%;
     display: flex;
@@ -89,19 +87,19 @@ body, html {
     padding: 20px;
 }
 
-.avatar span{
+.avatar span {
     flex: 1;
     display: flex;
     justify-content: flex-start;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 16px; /* Уменьшил размер шрифта */
     color: #fff;
 }
 
-.avatar_pod{
+.avatar_pod {
     border-radius: 6px;
-    width: 90%;
-    max-width: 350px;
+    width: 100%; /* Увеличил ширину для мобильных устройств */
+    max-width: 100%; /* Убрал жесткое ограничение */
     height: 25px;
     margin-top: 2%;
     display: flex;
@@ -116,7 +114,7 @@ body, html {
     width: 20%;
     height: 20px;
     background-color: #000;
-    margin-left: -20px;
+    margin: 5px;
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -124,7 +122,7 @@ body, html {
     font-size: 12px;
     color: #fff;
     text-align: center;
-    box-sizing: 20%;
+    box-sizing: border-box; /* Исправил ошибку в значении box-sizing */
 }
 
 .next-lvl {
@@ -139,7 +137,7 @@ body, html {
     align-items: center;
     font-size: 12px;
     color: #fff;
-    box-sizing: 25%;
+    box-sizing: border-box; /* Исправил ошибку в значении box-sizing */
 }
 
 .lvl {
@@ -154,30 +152,30 @@ body, html {
     align-items: center;
     font-size: 12px;
     color: #fff;
-    box-sizing: 25%;
+    box-sizing: border-box; /* Исправил ошибку в значении box-sizing */
 }
 
-.tap img, .lvl img, .next-lvl img{
-    width: 25px;
-    height: 25px;
+.tap img, .lvl img, .next-lvl img {
+    width: 20px; /* Уменьшил размеры изображений */
+    height: 20px; /* Уменьшил размеры изображений */
 }
 
-.progress_coin{
+.progress_coin {
     margin-top: 2%;
 }
 
-.progress_coin span{
-    text-size: 50px;
+.progress_coin span {
+    font-size: 16px; /* Исправил ошибку в свойстве text-size на font-size */
 }
 
 .coins_progress {
     border-radius: 6px;
     width: 100%;
-    height: 10%;
+    height: auto; /* Автоматическая высота */
     align-items: center;
     display: flex;
     justify-content: center;
-    font-size: 250%;
+    font-size: 24px; /* Уменьшил размер шрифта */
     color: #fff;
     align-items: center;
 }
@@ -193,9 +191,9 @@ body, html {
 .progress {
     position: relative;
     height: 10px;
-    width: 80%;
+    width: 90%; /* Увеличил ширину для мобильных устройств */
     margin-top: 2%;
-    max-width: 450px;
+    max-width: 100%; /* Убрал жесткое ограничение */
     border-radius: 15px;
     background-color: #ddd; /* Ensure the progress bar background is visible */
 }
@@ -210,7 +208,7 @@ body, html {
 }
 
 .progress-bar {
-    width: 80%;
+    width: 90%; /* Увеличил ширину для мобильных устройств */
     height: 20px;
     border-radius: 10px;
     align-items: center;
@@ -220,14 +218,12 @@ body, html {
 }
 
 .coin {
-    width: 230px;
-    height: 230px;
+    width: 150px; /* Уменьшил размеры для мобильных устройств */
+    height: 150px; /* Уменьшил размеры для мобильных устройств */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-
-
 }
 
 #image-button {
@@ -265,7 +261,7 @@ body, html {
     margin-top: 3%;
     border-radius: 6px;
     width: 90%;
-    height: 10%;
+    height: auto; /* Автоматическая высота */
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -274,25 +270,25 @@ body, html {
 }
 
 .energy-info img {
-    width: 15%;
-    height: 15%;
+    width: 12%; /* Уменьшил размеры изображений */
+    height: 12%; /* Уменьшил размеры изображений */
     align-items: center;
     display: flex;
     justify-content: center;
 }
 
-.energy_tap{
+.energy_tap {
     display: inline-block;
     margin-left: 2%;
     width: 30%;
     border: none;
-    font-size: 130%;
+    font-size: 18px; /* Уменьшил размер шрифта */
     align-items: center;
     display: flex;
     justify-content: center;
 }
 
-.energy_tap img{
+.energy_tap img {
     margin: 5px;
     width: 20px;
     height: 20px;
@@ -306,51 +302,34 @@ body, html {
     display: flex;
     justify-content: center;
     margin-left: 35%;
-    font-size: 110%;
+    font-size: 14px; /* Уменьшил размер шрифта */
     border: none;
     background-color: rgba(0, 0, 0, 0); /* This sets a transparent background */
     color: #fdfdfd;
     cursor: pointer;
 }
 
-
-.boost_button img{
+.boost_button img {
     margin: 15px;
-    width: 22%;
-    height: 22%;
+    width: 20%; /* Уменьшил размеры изображений */
+    height: 20%; /* Уменьшил размеры изображений */
     align-items: center;
 }
 
 .navigation {
     padding: 2%;
-    width: 100%;
-    height: 25%;
-    max-width: 350px;
+    width: 90%; /* Увеличил ширину для мобильных устройств */
+    height: auto; /* Автоматическая высота */
+    max-width: 100%; /* Убрал жесткое ограничение */
     display: flex;
     justify-content: space-around;
     background-color: #000;
     border-radius: 6px;
 }
 
-/*}*/
-
-
-/*.navigation1{*/
-
-
-/*}*/
-/*.navigation2{*/
-
-/*}*/
-/*.navigation3{*/
-
-/*}*/
-/*.navigation4{*/
-
-/*}*/
-.navigation-line{
-    width: 85%;
-    height: 25%;
+.navigation-line {
+    width: 90%; /* Увеличил ширину для мобильных устройств */
+    height: auto; /* Автоматическая высота */
     display: flex;
     justify-content: space-around;
     background-color: #000;
@@ -390,13 +369,13 @@ body, html {
     transform: translate(-50%, -50%);
     color: #fff;
     text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
     padding: 8px 12px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 12px; /* Уменьшил размер шрифта */
     font-weight: bold;
     z-index: 1; /* Выше остальных элементов */
     opacity: 0; /* Изначально делаем уведомление невидимым */
