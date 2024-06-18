@@ -2,11 +2,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const dotsElement = document.getElementById('dots');
     let dotCount = 0;
 
-    document.getElementById('image-button').addEventListener('click', function() {
+    document.getElementById('image-button').addEventListener('click', function(event) {
         if (navigator.vibrate) {
             navigator.vibrate(100); // Вибрация на 100 миллисекунд
         }
+
+        handleClick(event); // Обработка клика
     });
+
+    // Добавляем обработчики для событий касания
+    document.getElementById('image-button').addEventListener('touchstart', handleTouchStart);
+    document.getElementById('image-button').addEventListener('touchend', handleTouchEnd);
+    document.getElementById('image-button').addEventListener('touchcancel', handleTouchEnd);
 
     const changeDots = () => {
         dotCount = (dotCount + 1) % 4;
@@ -80,6 +87,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (isMouseDown) {
             setTimeout(() => handleClick(event), 100);
+        }
+    }
+
+    function handleTouchStart(event) {
+        event.preventDefault(); // Предотвращаем стандартное поведение
+
+        // Обрабатываем каждое касание
+        for (let touch of event.changedTouches) {
+            handleTouch(touch);
+        }
+    }
+
+    function handleTouchEnd(event) {
+        event.preventDefault(); // Предотвращаем стандартное поведение
+
+        // Обрабатываем каждое касание, как отпускание
+        for (let touch of event.changedTouches) {
+            handleTouchRelease(touch);
+        }
+    }
+
+    function handleTouch(touch) {
+        // Проверяем, что кнопка доступна для нажатия
+        if (!button.disabled && energyTap >= energyTapDecrement) {
+            // Координаты касания относительно .coin
+            const rect = button.getBoundingClientRect();
+            const posX = touch.clientX - rect.left;
+            const posY = touch.clientY - rect.top;
+
+            // Обработка нажатия
+            energyTap -= energyTapDecrement;
+            coinsProgress += coinsIncrement;
+            updateEnergyDisplay();
+            updateCoinsProgressDisplay();
+
+            showCoinNotification(`+${coinsIncrement} монет`, posX, posY);
+
+            // Увеличиваем прогресс
+            increaseProgress();
         }
     }
 
