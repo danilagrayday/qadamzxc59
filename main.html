@@ -2,59 +2,68 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
     <title>Qadam</title>
+    <link rel="icon" href="main.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <script src="logic.js" defer></script>
 </head>
 <body>
-<div id="loading-screen" class="loading-screen">
-    <div class="progress_few">
-        <div class="color"></div>
-    </div>
+<div id="progress_few" class="progress_few1">
+    <div class="color"></div>
+    <div id="loading_text" class="loading_text">Загружаемся<span id="dots"></span></div>
+    <div id="loading_subtext" class="loading_subtext">Пожалуйста, подождите секунду</div>
 </div>
 
 <div class="container" style="display: none">
-    <div class="main_menu">
-        <div class="profile-info">
-            <div class="avatar">
-                <img src="avatar.png" width="30px" height="30px">
-                <span>Javohir918</span>
-                <img src="main.png" width="105px" height="20px">
-            </div>
+    <div class="avatar">
+        <span class="avatar1" id="avatar1_id"><img src="avatar.png" alt=""></span>
+        <span class="tg_name" id="tg_name_id">ABOBA1337</span>
+        <span class="avatar2"><img src="main.png" alt="main"></span>
+    </div>
 
-            <div class="avatar_pod">
-                <div class="tap">За нажатие: +6<img src="coin.png"></div>
-                <div class="next-lvl">До следующего уровня: 50M<img src="coin.png"></div>
-                <div class="lvl">Пассивно в час: +324K<img src="coin.png"></div>
-            </div>
+    <div class="avatar_pod">
+        <div class="avatar_pod1">
+            <div class="tap_coast" id="tap_coast_id">+ 3<img src="coin.png" alt="coin"></div>
+            <div class="tap">за тап</div>
         </div>
-        <div class="progress_coin">
-            <div class="coins_progress"><img src="coin.png">0</div>
+        <div class="avatar_pod2">
+            <div class="next_lvl_coast" id="next_lvl_id">10<img src="coin.png" alt="coin"></div>
+            <div class="next_lvl">для апа</div>
         </div>
+        <div class="avatar_pod3">
+            <div class="passive_coast" id="passive_coast_id">100<img src="coin.png" alt="coin"></div>
+            <div class="passive">в час</div>
+        </div>
+    </div>
 
-        <div class="progress-bar">
-            <div class="progress"><div class="color"></div></div>
-        </div>
+    <div class="farm_coin">
+        <div class="farm_coins" id="farm_coins_id"><img src="coin.png" alt="coin">0</div>
+    </div>
 
-        <div class="coin">
-            <button id="image-button"></button>
-        </div>
+    <div class="stage">
+        <div class="stage_pod1" id="stage_pod_id1">0</div>
+        <div class="stage_pod2" id="stage_pod_id2">0</div>
+    </div>
+    <div class="progress_bar">
+        <div class="progress" id="progress"></div>
+    </div>
 
-        <div class="energy-info">
-            <span class="energy_tap"><img src="energy.png">4000/4000</span>
-            <button class="boost_button"><img src="boost.png">Буст</button>
-        </div>
+    <div class="coin">
+        <button id="image-button" onclick="increaseProgress()"></button>
+    </div>
 
-        <div class="navigation-line">
-            <div class="navigation">
-                <button>Главная</button>
-                <button>Задачи</button>
-                <button>Друзья</button>
-                <button>Улучшения</button>
-            </div>
+    <div class="energy-info">
+        <span class="energy_tap"><img src="energy.png" alt="energy">4000/4000</span>
+        <button class="boost_button"><img src="boost.png" alt="boost">Буст</button>
+    </div>
+
+    <div class="navigation-line">
+        <div class="navigation">
+            <button>Главная</button>
+            <button>Задачи</button>
+            <button>Друзья</button>
+            <button>Улучшения</button>
         </div>
     </div>
 </div>
-</body>
-</html>
