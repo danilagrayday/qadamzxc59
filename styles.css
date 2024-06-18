@@ -1,175 +1,205 @@
-.progress_few {
+/*Страница загрузки и анимация*/
+.progress_few1 {
     position: relative;
     height: 10px;
     width: 80%;
-    max-width: 450px;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    top: -5%;
+    transform: translateY(50%);
 }
 
-.progress_few .color {
+.progress_few1 .color {
     position: absolute;
-    background-color: #fdfdfd;
+    background-color: #FFD700;
     width: 0;
     height: 10px;
     border-radius: 15px;
-    animation: progres 4s linear forwards;
+    animation: progresss 3.5s linear forwards;
 }
 
-@keyframes progres {
+@keyframes progresss {
     0% {
-        width: 1%;
+        width: 0.01%;
     }
     100% {
         width: 100%;
     }
 }
 
-.progress_few {
-    height: 100%;
-    background-color: #FFD700;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
+/*Текст загрузки*/
+.loading_text, .loading_subtext {
+    position: absolute;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    color: #fff;
+    text-align: center;
 }
 
+.loading_text {
+    top: 500%;
+    font-size: 23px;
+}
+
+.loading_subtext {
+    top: 1200%;
+    font-size: 19px;
+}
+
+/*Сама страница*/
 body, html {
-    height: 100%;
-    margin: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Темный фон */
-    color: #f0f0f0; /* Светлый текст */
+    background-color: #1a1a1a;
+    color: #f0f0f0;
 }
-
 
 .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    height: 100vh;
     background-image: url('background.png');
+    background-size: cover;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.main_menu {
-    width: 100%;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile-info{
-    margin-top: 20px;
+.avatar {
+    border-radius: 10px 10px 3px 3px;
+    background-color: #000;
     width: 90%;
+    height: 9%;
+    margin: 5%;
+    font-size: 110%;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.avatar{
-    border-radius: 6px;
+.avatar1 img {
+    width: 50%;
+    height: 50%;
+    margin-left: 30%;
+}
+
+.avatar2 img {
+    width: 50%;
+    height: 10%;
+    margin-left: 43%;
+}
+
+.avatar_pod {
     width: 90%;
     height: 10%;
-    max-width: 350px;
+    align-items: center;
+    display: flex;
+    margin: -3% 5% 3%;
+    justify-content: space-around;
+}
+
+.avatar_pod1 {
+    border-radius: 3px 3px 10px 10px;
     background-color: #000;
-    margin-top: 1%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.avatar span{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
-    font-size: 20px;
-    color: #fff;
-}
-
-.avatar_pod{
-    border-radius: 6px;
-    width: 90%;
-    max-width: 350px;
-    height: 25px;
-    margin-top: 2%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    align-items: center;
+    width: 29%;
+    height: 70%;
+    padding: 1%;
+    font-size: 100%;
     text-align: center;
 }
 
 .tap {
-    border-radius: 6px;
-    width: 20%;
-    height: 20px;
-    background-color: #000;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    top: 10%;
+    position: relative;
+}
+
+.tap_coast {
+    top: 10%;
     align-items: center;
-    font-size: 12px;
-    color: #fff;
+    font-size: 100%;
+    position: relative;
     text-align: center;
-    box-sizing: 20%;
 }
 
-.next-lvl {
-    border-radius: 6px;
-    width: 25%;
-    height: 20px;
+.tap_coast img{
+    margin-left: 3%;
+    width: 15%;
+    height: 15%;
+}
+
+.avatar_pod2 {
+    border-radius: 3px 3px 10px 10px;
     background-color: #000;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    align-items: center;
-    font-size: 12px;
-    color: #fff;
-    box-sizing: 25%;
+    width: 29%;
+    height: 70%;
+    padding: 1%;
+    font-size: 100%;
+    text-align: center;
 }
 
-.lvl {
-    border-radius: 6px;
-    width: 25%;
-    height: 20px;
+.next_lvl {
+    top: 10%;
+    position: relative;
+    width: 100%;
+}
+
+.next_lvl_coast {
+    top: 10%;
+    align-items: center;
+    font-size: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.next_lvl_coast img{
+    margin-left: 3%;
+    width: 15%;
+    height: 15%;
+}
+
+.avatar_pod3 {
+    border-radius: 3px 3px 10px 10px;
     background-color: #000;
-    margin: 5px;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    width: 29%;
+    height: 70%;
+    padding: 1%;
+    font-size: 100%;
+    text-align: center;
+}
+
+.passive {
+    top: 10%;
+    position: relative;
+    width: 100%;
+}
+
+.passive_coast {
+    top: 10%;
     align-items: center;
-    font-size: 12px;
-    color: #fff;
-    box-sizing: 25%;
+    font-size: 100%;
+    position: relative;
+    text-align: center;
 }
 
-.tap img, .lvl img, .next-lvl img{
-    width: 25px;
-    height: 25px;
+.passive_coast img{
+    margin-left: 3%;
+    width: 15%;
+    height: 15%;
 }
 
-.progress_coin{
+.progress_coin {
     margin-top: 2%;
 }
 
 .progress_coin span{
-    text-size: 50px;
+    font-size: 50px;
 }
 
-.coins_progress {
+.farm_coins {
     border-radius: 6px;
     width: 100%;
     height: 10%;
@@ -178,10 +208,10 @@ body, html {
     justify-content: center;
     font-size: 250%;
     color: #fff;
-    align-items: center;
+    align-self: center;
 }
 
-.coins_progress img {
+.farm_coins img {
     width: 12%;
     height: 12%;
     align-items: center;
@@ -189,35 +219,38 @@ body, html {
     justify-content: center;
 }
 
-.progress {
-    position: relative;
-    height: 10px;
-    width: 80%;
-    margin-top: 2%;
-    max-width: 450px;
-    border-radius: 15px;
-    background-color: #ddd; /* Ensure the progress bar background is visible */
-}
-
-.progress .color {
-    position: absolute;
-    background-color: #00ff00; /* Green color for progress */
-    width: 0;
-    height: 10px;
-    border-radius: 15px;
-    transition: width 0.5s ease; /* Smooth width transition */
-}
-
-.progress-bar {
-    width: 80%;
-    height: 20px;
-    border-radius: 10px;
+.stage{
     align-items: center;
-    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.stage_pod1, .stage_pod2{
+    margin-bottom: 2%;
+    align-items: center;
     display: flex;
     justify-content: center;
+
 }
 
+.progress_bar {
+    width: 80%;
+    height: 20px;
+    margin-left: 10%;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
 
 .coin {
     width: 230px;
@@ -225,65 +258,60 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
-
-
+    margin-left: 20%;
+    margin-top: 8%;
+    border-radius: 30px;
 }
 
 #image-button {
-    width: 100%;
-    height: 100%;
-    background: url('tap_coin.png') no-repeat center;
+    width: 230px;
+    height: 230px;
+    background: url('dfd.png') no-repeat center;
     background-size: contain;
+    border-radius: 160px;
     border: none;
-    cursor: pointer;
-    border-radius: 130px;
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 #image-button:active {
-    transform: scale(0.9);
+    transform: scale(0.95);
+    animation: pressAnimation 0.3s ease-in-out;
 }
 
 @keyframes pressAnimation {
     0% {
         transform: scale(1);
     }
-    50% {
-        transform: scale(0.9);
+    30% {
+        transform: scale(0.98);
+    }
+    60% {
+        transform: scale(1);
     }
     100% {
         transform: scale(1);
     }
 }
 
-#image-button:active {
-    animation: pressAnimation 0.1s ease-in-out;
+.element {
+    animation: pressAnimation 0.4s ease-in-out forwards;
 }
 
+
 .energy-info {
-    margin-top: 3%;
     border-radius: 6px;
     width: 90%;
     height: 10%;
+    margin-top: 1%;
     align-items: center;
     display: flex;
     justify-content: space-between;
     color: #fff;
-    align-items: center;
-}
-
-.energy-info img {
-    width: 15%;
-    height: 15%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    align-self: center;
 }
 
 .energy_tap{
-    display: inline-block;
-    margin-left: 2%;
+    margin-left: 6%;
     width: 30%;
     border: none;
     font-size: 130%;
@@ -300,19 +328,17 @@ body, html {
     align-items: center;
 }
 
-.boost_button {
+.boost_button{
     width: 35%;
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-left: 35%;
+    margin-left: 40%;
     font-size: 110%;
     border: none;
-    background-color: rgba(0, 0, 0, 0); /* This sets a transparent background */
-    color: #fdfdfd;
-    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
 }
-
 
 .boost_button img{
     margin: 15px;
@@ -322,12 +348,13 @@ body, html {
 }
 
 .navigation {
+    width: 90%;
+    height: 23%;
     padding: 2%;
-    width: 100%;
-    height: 25%;
-    max-width: 350px;
+    margin-left: 3%;
     display: flex;
-    justify-content: space-around;
+    text-align: center;
+    justify-content: space-between;
     background-color: #000;
     border-radius: 6px;
 }
@@ -349,38 +376,26 @@ body, html {
 
 /*}*/
 .navigation-line{
-    width: 85%;
-    height: 25%;
+    width: 100%;
+    height: 23%;
     display: flex;
-    justify-content: space-around;
-    background-color: #000;
+    text-align: center;
+    justify-content: space-between;
     border-radius: 6px;
     margin-top: 7px;
 }
 
 .navigation button {
-    background-color: #000000;
+    background-color: #000;
     color: white;
     padding: 10px 14px;
     border: none;
     cursor: pointer;
 }
 
-.loading-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 .coin {
     position: relative;
-    display: inline-block; /* Чтобы уведомление располагалось рядом с изображением */
+    display: inline-block;
 }
 
 .coin-notification {
@@ -400,8 +415,8 @@ body, html {
     font-weight: bold;
     z-index: 1; /* Выше остальных элементов */
     opacity: 0; /* Изначально делаем уведомление невидимым */
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Плавная анимация появления */
-    pointer-events: none; /* Уведомление не будет перехватывать события мыши */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Плавная анимация появления */
+    pointer-events: none;
 }
 
 .coin:hover .coin-notification {
